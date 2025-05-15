@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake News Detector</title>
+  <link rel="stylesheet" href="Frontend.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="title">📰 Fake News Detector</h1>
+      <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Switch to Dark Mode</button>
+    </div>
+    <p>Enter news text below:</p>
+    <textarea id="newsInput" placeholder="Enter news text here..."></textarea><br>
+    <button onclick="checkFakeNews()">Check</button>
+    <div class="results-box" id="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const toggleBtn = document.getElementById("darkModeToggle");
+
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️ Switch to Light Mode";
+      } else {
+        toggleBtn.textContent = "🌙 Switch to Dark Mode";
+      }
+    }
+  </script>
+</body>
+</html>
